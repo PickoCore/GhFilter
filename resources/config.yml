@@ -1,0 +1,36 @@
+# GhFilter config
+
+# rate limiting
+window_ms: 5000
+max_attempts_per_window: 4
+
+# concurrent cap per ip
+max_concurrent: 2
+
+# temporary ban (seconds)
+ban_seconds: 60
+
+# kick message
+kick_message: "terlalu banyak koneksi, coba lagi nanti."
+
+# "null/invalid traffic" defense:
+# jika koneksi masuk tapi TIDAK mencapai handshake dalam waktu ini,
+# akan dihitung sebagai "incomplete handshake".
+handshake_timeout_ms: 800
+
+# jika incomplete handshake dari 1 IP melewati limit dalam window, ban
+max_incomplete_per_window: 3
+
+# metrics logging
+metrics_log_interval_seconds: 10
+
+# attack detection (untuk alert)
+# kalau blocked dalam interval >= threshold, kirim alert
+attack_block_threshold: 25
+attack_alert_cooldown_seconds: 60
+
+# discord webhook (kosongkan untuk disable)
+discord_webhook_url: ""
+discord_username: "GhFilter"
+discord_embed_title: "⚠️ attack detected"
+discord_embed_color_red: 16711680
