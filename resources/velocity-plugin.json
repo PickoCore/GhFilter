@@ -1,0 +1,8 @@
+{
+  "id": "ghfilter",
+  "name": "GhFilter",
+  "version": "1.1.0",
+  "description": "Connection flood + incomplete-handshake filter for Velocity",
+  "authors": ["gha"],
+  "main": "id.minervax.ghfilter.GhFilter"
+}
